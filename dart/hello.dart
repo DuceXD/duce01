@@ -3,4 +3,5 @@ void main(){
     print("Kotchakeng");
     print("My nick name is Duce");
     print("I'm 20 y");
+    print("save milli ");
 }
