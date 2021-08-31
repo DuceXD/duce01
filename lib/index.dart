@@ -1,4 +1,7 @@
+import 'package:duce01/config/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:duce01/screen/login.dart';
+
 
 class Index extends StatelessWidget {
   @override
@@ -16,7 +19,7 @@ class Index extends StatelessWidget {
         height: size.height *0.2,
         ),
         Text(
-          "Welcone to KMUTNB",
+          "Welcome to KMUTNB",
           style: TextStyle(
           fontSize: 32,
           color: Colors.deepOrangeAccent,
@@ -39,14 +42,15 @@ class Index extends StatelessWidget {
       ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       textStyle: TextStyle(
-                        fontSize: 20,
+                        fontSize: sFont,
                       ),
-                      primary: Colors.amber[900],
+                      primary: pColor,
                       padding: EdgeInsets.all(20.0),
                       shape: StadiumBorder()),
                   child: Text('LOGIN'),
                   onPressed: () {
-                    print("LOGIN!!");
+                    print("สวัสดีจ้า!!");
+                    Navigator.pushNamed(context, 'login');
                   },
                 ),
                 SizedBox(
@@ -55,14 +59,15 @@ class Index extends StatelessWidget {
       ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       textStyle: TextStyle(
-                        fontSize: 20,
+                        fontSize: sFont,
                       ),
-                      primary: Colors.amber[900],
+                      primary: sColor,
                       padding: EdgeInsets.all(20.0),
                       shape: StadiumBorder()),
-                  child: Text('Sign UP'),
+                  child: Text('Register'),
                   onPressed: () {
-                    print("Sign UP!!");
+                    print("สมัครสมาชิก!!");
+                    Navigator.pushNamed(context, 'register');
                   },
                 ),
       ]    

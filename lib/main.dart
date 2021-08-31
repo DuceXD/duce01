@@ -1,5 +1,9 @@
-import 'package:duce01/index.dart';
 import 'package:flutter/material.dart';
+import 'package:duce01/config/constant.dart';
+import 'package:duce01/screen/homepage.dart';
+import 'package:duce01/index.dart';
+import 'package:duce01/screen/login.dart';
+import 'package:duce01/screen/register.dart';
 
 
 void main() {
@@ -11,7 +15,14 @@ class Myapp extends StatelessWidget {
 
     return MaterialApp(
       title: 'KMUTNB',
-      theme: ThemeData.dark(),
+      theme: ThemeData(
+        primaryColor: pColor,
+        secondaryHeaderColor: sColor, 
+      ),
+      routes: {
+        'login' : (context) => Login(),
+        'register' :(context) => Register(),
+      },
       home: Index(),
     );
   }
